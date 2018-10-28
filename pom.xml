@@ -11,6 +11,7 @@
     <module>springboot2-dubbo-parent</module>
     <module>springboot2-dubbo-common</module>
     <module>springboot2-dubbo-common-web</module>
+    <module>springboot2-dubbo-system-api</module>
   </modules>
   <packaging>pom</packaging>
 
