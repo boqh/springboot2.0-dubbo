@@ -10,6 +10,7 @@
   <modules>
     <module>springboot2-dubbo-parent</module>
     <module>springboot2-dubbo-common</module>
+    <module>springboot2-dubbo-common-web</module>
   </modules>
   <packaging>pom</packaging>
 
