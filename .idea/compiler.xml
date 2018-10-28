@@ -22,11 +22,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="springboot2-dubbo" />
+        <module name="springboot2-dubbo-common" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="springboot2-dubbo" target="1.7" />
+      <module name="springboot2-dubbo" target="1.5" />
+      <module name="springboot2-dubbo-common" target="1.7" />
+      <module name="springboot2-dubbo-parent" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
