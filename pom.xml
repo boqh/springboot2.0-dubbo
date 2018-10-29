@@ -15,7 +15,6 @@
     <module>springboot2-dubbo-system-provider</module>
     <module>springboot2-dubbo-system-web</module>
     <module>springboot2-dubbo-common-multidatabase</module>
-    <!--<module>springboot2-dubbo-system-boss</module>-->
   </modules>
   <packaging>pom</packaging>
 

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>springboot2-dubbo-parent</artifactId>
+        <groupId>com.bqh</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../springboot2-dubbo-parent/pom.xml</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>springboot2-dubbo-common-multidatabase</artifactId>
+
+    <name>springboot2-dubbo-common-multidatabase</name>
+
+    <properties>
+    </properties>
+
+    <dependencies>
+
+        <!-- SpringBoot Web容器 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- SpringBoot 拦截器 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+        <!--阿里数据库连接池 -->
+        <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>druid-spring-boot-starter</artifactId>
+        <version>${druid.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.bqh</groupId>
+            <artifactId>springboot2-dubbo-common</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.bqh</groupId>
+            <artifactId>springboot2-dubbo-system-api</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+        <groupId>com.bqh</groupId>
+        <artifactId>springboot2-dubbo-common-web</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </dependency>
+
+
+    </dependencies>
+
+    <build>
+
+    </build>
+</project>
