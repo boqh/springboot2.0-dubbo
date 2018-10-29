@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <!--<property name="maxHistory" value="30"/>-->
+    <property name="log_dir" value="log"/>
+    <!-- 彩色日志 -->
+    <!-- 彩色日志依赖的渲染类 -->
+    <conversionRule conversionWord="clr" converterClass="org.springframework.boot.logging.logback.ColorConverter"/>
+    <conversionRule conversionWord="wex"
+                    converterClass="org.springframework.boot.logging.logback.WhitespaceThrowableProxyConverter"/>
+    <conversionRule conversionWord="wEx"
+                    converterClass="org.springframework.boot.logging.logback.ExtendedWhitespaceThrowableProxyConverter"/>
+
+    <!-- 彩色日志格式 -->
+    <property name="CONSOLE_LOG_PATTERN"
+              value="${CONSOLE_LOG_PATTERN:-%clr(%d{'yyyy-MM-dd HH:mm:ss,SSS'}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}}"/>
+    <!-- Console 输出设置 -->
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${CONSOLE_LOG_PATTERN}</pattern>
+            <charset>utf8</charset>
+        </encoder>
+    </appender>
+
+
+    <appender name="I" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>${log_dir}/springboot2-dubbo-dubbo-provider-info.log</File>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${log_dir}/springboot2-dubbo-dubbo-provider-info.%d{yyyy-MM-dd}.log</FileNamePattern>
+            <!--<MaxHistory>${maxHistory}</MaxHistory>-->
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{'yyyy-MM-dd HH:mm:ss,SSS'} %-5p [%t] {%c}-%m%n</pattern>
+            <charset>utf8</charset>
+        </encoder>
+        <filter class="com.alibaba.citrus.logconfig.logback.LevelRangeFilter">
+            <levelMin>DEBUG</levelMin>
+            <levelMax>INFO</levelMax>
+        </filter>
+    </appender>
+
+
+    <appender name="E" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>${log_dir}/springboot2-dubbo-dubbo-provider-error.log</File>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${log_dir}/springboot2-dubbo-dubbo-provider-error.%d{yyyy-MM-dd}.log</FileNamePattern>
+            <!--<MaxHistory>${maxHistory}</MaxHistory>-->
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{'yyyy-MM-dd HH:mm:ss,SSS'} %-5p [%t] {%c}-%m%n</pattern>
+            <charset>utf8</charset>
+        </encoder>
+        <filter class="com.alibaba.citrus.logconfig.logback.LevelRangeFilter">
+            <levelMin>WARN</levelMin>
+            <levelMax>ERROR</levelMax>
+        </filter>
+    </appender>
+
+
+    <!-- Application Loggers -->
+    <logger name="com.bqh">
+        <!--<level value="debug"/>-->
+        <level value="INFO"/>
+    </logger>
+
+    <!-- 3rdparty Loggers -->
+    <logger name="org.springframework.core">
+        <level value="INFO"/>
+    </logger>
+
+    <logger name="org.springframework.beans">
+        <level value="INFO"/>
+    </logger>
+
+    <logger name="org.springframework.context">
+        <level value="INFO"/>
+    </logger>
+
+    <logger name="org.springframework.web">
+        <level value="INFO"/>
+    </logger>
+
+    <logger name="org.springframework.jdbc">
+        <level value="INFO"/>
+    </logger>
+
+    <logger name="org.mybatis.spring">
+        <level value="INFO"/>
+    </logger>
+    <logger name="java.sql">
+        <level value="INFO"/>
+    </logger>
+    <!-- Root Logger -->
+
+    <root level="info">
+        <appender-ref ref="console"/>
+        <springProfile name="dev">
+            <appender-ref ref="console"/>
+            <appender-ref ref="I"/>
+            <appender-ref ref="E"/>
+        </springProfile>
+        <springProfile name="qa">
+            <appender-ref ref="I"/>
+            <appender-ref ref="E"/>
+        </springProfile>
+        <springProfile name="pro">
+            <appender-ref ref="I"/>
+            <appender-ref ref="E"/>
+        </springProfile>
+    </root>
+</configuration>

@@ -3,12 +3,14 @@ package com.bqh.system.domain;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import java.io.Serializable;
+
 /**
  * 角色和部门关联 sys_role_dept
  * 
  * @author ruoyi
  */
-public class SysRoleDept
+public class SysRoleDept implements Serializable
 {
     /** 角色ID */
     private Long roleId;

@@ -5,6 +5,7 @@ import com.bqh.common.base.BaseEntity;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
@@ -13,7 +14,7 @@ import java.util.List;
  * 
  * @author ruoyi
  */
-public class SysUser extends BaseEntity
+public class SysUser extends BaseEntity implements Serializable
 {
     private static final long serialVersionUID = 1L;
 

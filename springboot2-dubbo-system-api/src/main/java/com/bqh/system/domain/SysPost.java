@@ -5,12 +5,14 @@ import com.bqh.common.base.BaseEntity;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import java.io.Serializable;
+
 /**
  * 岗位表 sys_post
  * 
  * @author ruoyi
  */
-public class SysPost extends BaseEntity
+public class SysPost extends BaseEntity implements Serializable
 {
     private static final long serialVersionUID = 1L;
 

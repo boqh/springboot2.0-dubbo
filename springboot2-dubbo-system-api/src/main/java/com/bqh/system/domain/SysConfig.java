@@ -5,12 +5,14 @@ import com.bqh.common.base.BaseEntity;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import java.io.Serializable;
+
 /**
  * 参数配置表 sys_config
  * 
  * @author ruoyi
  */
-public class SysConfig extends BaseEntity
+public class SysConfig extends BaseEntity implements Serializable
 {
     private static final long serialVersionUID = 1L;
 

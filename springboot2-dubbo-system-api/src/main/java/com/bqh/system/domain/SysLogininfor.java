@@ -5,6 +5,7 @@ import com.bqh.common.base.BaseEntity;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -12,7 +13,7 @@ import java.util.Date;
  * 
  * @author ruoyi
  */
-public class SysLogininfor extends BaseEntity
+public class SysLogininfor extends BaseEntity implements Serializable
 {
     private static final long serialVersionUID = 1L;
     

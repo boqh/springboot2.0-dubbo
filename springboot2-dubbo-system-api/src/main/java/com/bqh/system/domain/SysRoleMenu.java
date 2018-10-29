@@ -3,12 +3,14 @@ package com.bqh.system.domain;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import java.io.Serializable;
+
 /**
  * 角色和菜单关联 sys_role_menu
  * 
  * @author ruoyi
  */
-public class SysRoleMenu
+public class SysRoleMenu implements Serializable
 {
     /** 角色ID */
     private Long roleId;

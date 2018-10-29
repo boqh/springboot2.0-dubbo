@@ -5,12 +5,14 @@ import com.bqh.common.base.BaseEntity;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import java.io.Serializable;
+
 /**
  * 字典数据表 sys_dict_data
  * 
  * @author ruoyi
  */
-public class SysDictData extends BaseEntity
+public class SysDictData extends BaseEntity implements Serializable
 {
     private static final long serialVersionUID = 1L;
 

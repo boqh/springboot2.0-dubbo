@@ -4,6 +4,7 @@ import com.bqh.common.base.BaseEntity;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,7 +13,7 @@ import java.util.List;
  * 
  * @author ruoyi
  */
-public class SysMenu extends BaseEntity
+public class SysMenu extends BaseEntity implements Serializable
 {
     private static final long serialVersionUID = 1L;
     

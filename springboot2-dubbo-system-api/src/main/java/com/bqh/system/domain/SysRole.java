@@ -5,12 +5,14 @@ import com.bqh.common.base.BaseEntity;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import java.io.Serializable;
+
 /**
  * 角色表 sys_role
  * 
  * @author ruoyi
  */
-public class SysRole extends BaseEntity
+public class SysRole extends BaseEntity implements Serializable
 {
     private static final long serialVersionUID = 1L;
 

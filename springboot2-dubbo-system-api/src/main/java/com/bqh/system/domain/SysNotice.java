@@ -4,12 +4,14 @@ import com.bqh.common.base.BaseEntity;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import java.io.Serializable;
+
 /**
  * 通知公告表 sys_notice
  * 
  * @author ruoyi
  */
-public class SysNotice extends BaseEntity
+public class SysNotice extends BaseEntity implements Serializable
 {
     private static final long serialVersionUID = 1L;
 

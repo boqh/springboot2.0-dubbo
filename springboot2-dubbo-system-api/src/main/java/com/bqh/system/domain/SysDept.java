@@ -4,12 +4,14 @@ import com.bqh.common.base.BaseEntity;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import java.io.Serializable;
+
 /**
  * 部门表 sys_dept
  * 
  * @author ruoyi
  */
-public class SysDept extends BaseEntity
+public class SysDept extends BaseEntity implements Serializable
 {
     private static final long serialVersionUID = 1L;
 

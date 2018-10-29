@@ -5,6 +5,7 @@ import com.bqh.common.enums.OnlineStatus;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -12,7 +13,7 @@ import java.util.Date;
  * 
  * @author ruoyi
  */
-public class SysUserOnline extends BaseEntity
+public class SysUserOnline extends BaseEntity implements Serializable
 {
     private static final long serialVersionUID = 1L;
     
@@ -37,7 +38,7 @@ public class SysUserOnline extends BaseEntity
     /** 操作系统 */
     private String os;
 
-    /** session创建时间 */
+     /** session创建时间 */
     private Date startTimestamp;
 
     /** session最后访问时间 */
