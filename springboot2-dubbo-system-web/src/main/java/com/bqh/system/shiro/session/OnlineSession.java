@@ -3,14 +3,12 @@ package com.bqh.system.shiro.session;
 import com.bqh.common.enums.OnlineStatus;
 import org.apache.shiro.session.mgt.SimpleSession;
 
-import java.io.Serializable;
-
 /**
  * 在线用户会话属性
  * 
  * @author ruoyi
  */
-public class OnlineSession extends SimpleSession implements Serializable
+public class OnlineSession extends SimpleSession
 {
     private static final long serialVersionUID = 1L;
 

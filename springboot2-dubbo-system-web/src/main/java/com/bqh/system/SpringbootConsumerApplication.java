@@ -7,10 +7,10 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
-@EnableWebMvc
 @SpringBootApplication(exclude={DataSourceAutoConfiguration.class,HibernateJpaAutoConfiguration.class})
+@EnableAspectJAutoProxy
 @EnableDubboConfiguration
 public class SpringbootConsumerApplication extends SpringBootServletInitializer {
 
@@ -21,5 +21,6 @@ public class SpringbootConsumerApplication extends SpringBootServletInitializer 
 
     public static void main(String[] args) {
         SpringApplication.run(SpringbootConsumerApplication.class, args);
+        System.out.println("### Spring boot webApplication starter ...");
     }
 }

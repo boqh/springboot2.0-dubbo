@@ -30,7 +30,7 @@ public class LoginService
     private PasswordService passwordService;
 
     @Reference(version = "1.0.0")
-    private SysUserService userService;
+    private SysUserService sysUserService;
 
     /**
      * 登录
@@ -66,16 +66,16 @@ public class LoginService
         }
 
         // 查询用户信息
-        SysUser user = userService.selectUserByLoginName(username);
+        SysUser user = sysUserService.selectUserByLoginName(username);
 
         if (user == null && maybeMobilePhoneNumber(username))
         {
-            user = userService.selectUserByPhoneNumber(username);
+            user = sysUserService.selectUserByPhoneNumber(username);
         }
 
         if (user == null && maybeEmail(username))
         {
-            user = userService.selectUserByEmail(username);
+            user = sysUserService.selectUserByEmail(username);
         }
 
         if (user == null)
@@ -120,6 +120,6 @@ public class LoginService
     {
         user.setLoginIp(ShiroUtils.getIp());
         user.setLoginDate(DateUtils.getNowDate());
-        userService.updateUserInfo(user);
+        sysUserService.updateUserInfo(user);
     }
 }

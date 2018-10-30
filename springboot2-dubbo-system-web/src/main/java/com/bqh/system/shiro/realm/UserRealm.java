@@ -38,6 +38,17 @@ public class UserRealm extends AuthorizingRealm
     @Autowired
     private LoginService loginService;
 
+
+
+
+//    /**
+//     * 必须重写此方法，不然Shiro会报错
+//     */
+//    @Override
+//    public boolean supports(AuthenticationToken token) {
+//        return token != null && token instanceof UserToken;
+//    }
+
     /**
      * 授权
      */

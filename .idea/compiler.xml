@@ -23,16 +23,22 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="springboot2-dubbo-common" />
+        <module name="springboot2-dubbo-common-multidatabase" />
         <module name="springboot2-dubbo-common-web" />
         <module name="springboot2-dubbo-system-api" />
+        <module name="springboot2-dubbo-system-provider" />
+        <module name="springboot2-dubbo-system-web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="springboot2-dubbo" target="1.5" />
       <module name="springboot2-dubbo-common" target="1.8" />
+      <module name="springboot2-dubbo-common-multidatabase" target="1.8" />
       <module name="springboot2-dubbo-common-web" target="1.8" />
       <module name="springboot2-dubbo-parent" target="1.8" />
       <module name="springboot2-dubbo-system-api" target="1.8" />
+      <module name="springboot2-dubbo-system-provider" target="1.8" />
+      <module name="springboot2-dubbo-system-web" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -32,7 +32,7 @@ public class SwaggerConfig
                 .apiInfo(apiInfo())
                 .select()
                 // 指定当前包路径
-                .apis(RequestHandlerSelectors.basePackage("com.ruoyi.web.controller.tool"))
+                .apis(RequestHandlerSelectors.basePackage("com.bqh.system.controller.tool"))
                 // 扫描所有 .apis(RequestHandlerSelectors.any())
                 .paths(PathSelectors.any())
                 .build();

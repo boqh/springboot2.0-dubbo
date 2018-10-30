@@ -60,35 +60,35 @@
     <!-- Application Loggers -->
     <logger name="com.bqh">
         <!--<level value="debug"/>-->
-        <level value="INFO"/>
+        <level value="debug"/>
     </logger>
 
     <!-- 3rdparty Loggers -->
     <logger name="org.springframework.core">
-        <level value="INFO"/>
+        <level value="debug"/>
     </logger>
 
     <logger name="org.springframework.beans">
-        <level value="INFO"/>
+        <level value="debug"/>
     </logger>
 
     <logger name="org.springframework.context">
-        <level value="INFO"/>
+        <level value="debug"/>
     </logger>
 
     <logger name="org.springframework.web">
-        <level value="INFO"/>
+        <level value="debug"/>
     </logger>
 
     <logger name="org.springframework.jdbc">
-        <level value="INFO"/>
+        <level value="debug"/>
     </logger>
 
     <logger name="org.mybatis.spring">
-        <level value="INFO"/>
+        <level value="debug"/>
     </logger>
     <logger name="java.sql">
-        <level value="INFO"/>
+        <level value="debug"/>
     </logger>
     <!-- Root Logger -->
 

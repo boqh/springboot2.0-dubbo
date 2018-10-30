@@ -4,9 +4,12 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/springboot2-dubbo.iml" filepath="$PROJECT_DIR$/springboot2-dubbo.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot2-dubbo-common/springboot2-dubbo-common.iml" filepath="$PROJECT_DIR$/springboot2-dubbo-common/springboot2-dubbo-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot2-dubbo-common-multidatabase/springboot2-dubbo-common-multidatabase.iml" filepath="$PROJECT_DIR$/springboot2-dubbo-common-multidatabase/springboot2-dubbo-common-multidatabase.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot2-dubbo-common-web/springboot2-dubbo-common-web.iml" filepath="$PROJECT_DIR$/springboot2-dubbo-common-web/springboot2-dubbo-common-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot2-dubbo-parent/springboot2-dubbo-parent.iml" filepath="$PROJECT_DIR$/springboot2-dubbo-parent/springboot2-dubbo-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot2-dubbo-system-api/springboot2-dubbo-system-api.iml" filepath="$PROJECT_DIR$/springboot2-dubbo-system-api/springboot2-dubbo-system-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot2-dubbo-system-provider/springboot2-dubbo-system-provider.iml" filepath="$PROJECT_DIR$/springboot2-dubbo-system-provider/springboot2-dubbo-system-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot2-dubbo-system-web/springboot2-dubbo-system-web.iml" filepath="$PROJECT_DIR$/springboot2-dubbo-system-web/springboot2-dubbo-system-web.iml" />
     </modules>
   </component>
 </project>
