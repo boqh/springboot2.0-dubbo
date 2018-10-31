@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+    <!-- 消费者 应用信息 -->
+    <dubbo:application name="springboot2-dubbo-system-consumer"/>
+
+    <!-- 注册中心服务地址 -->
+    <!--<dubbo:registry  protocol="zookeeper" address="42.51.40.160:2181" timeout="5000"/>-->
+    <dubbo:registry id="zookeeper" protocol="zookeeper" address="42.51.40.160:2181" />
+
+    <!-- 消费者配置 -->
+    <dubbo:consumer   check="false"/>
+
+    <!-- 使用注解方式-->
+    <dubbo:annotation package="com.bqh.system"/>
+
+    <dubbo:reference id="sysConfigService" interface="com.bqh.system.service.SysConfigService" check="false" />
+    <dubbo:reference id="sysDeptService" interface="com.bqh.system.service.SysDeptService" check="false" />
+    <dubbo:reference id="sysDictDataService" interface="com.bqh.system.service.SysDictDataService" check="false" />
+    <dubbo:reference id="sysDictTypeService" interface="com.bqh.system.service.SysDictTypeService" check="false" />
+    <dubbo:reference id="sysLogininforService" interface="com.bqh.system.service.SysLogininforService" check="false" />
+    <dubbo:reference id="sysMenuService" interface="com.bqh.system.service.SysMenuService" check="false" />
+    <dubbo:reference id="sysNoticeService" interface="com.bqh.system.service.SysNoticeService" check="false" />
+    <dubbo:reference id="sysOperLogService" interface="com.bqh.system.service.SysOperLogService" check="false" />
+    <dubbo:reference id="sysPostService" interface="com.bqh.system.service.SysPostService" check="false" />
+    <dubbo:reference id="sysRoleService" interface="com.bqh.system.service.SysRoleService" check="false" />
+    <dubbo:reference id="sysUserOnlineService" interface="com.bqh.system.service.SysUserOnlineService" check="false" />
+    <dubbo:reference id="sysUserService" interface="com.bqh.system.service.SysUserService" check="false" />
+</beans>

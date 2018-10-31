@@ -17,7 +17,7 @@ public class UserControllerTest {
 
     private MockMvc mvc;
 
-    @Reference
+    @Reference(version = "1.0.0")
     private SysUserService sysUserService;
 
 
@@ -25,6 +25,9 @@ public class UserControllerTest {
     public void userInfo() throws Exception {
         SysUser sysUser = new SysUser();
         System.out.println("------------"+sysUserService.selectUserList(sysUser).size());
+        System.out.println("------------"+sysUserService.selectUserByLoginName("admin").getPassword());
+        System.out.println("------------");
+        System.out.println("------------");
     }
 
     //    @Before

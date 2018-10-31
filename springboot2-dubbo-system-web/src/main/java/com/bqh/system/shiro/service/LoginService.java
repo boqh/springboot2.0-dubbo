@@ -14,9 +14,10 @@ import com.bqh.system.domain.SysUser;
 import com.bqh.system.manager.AsyncManager;
 import com.bqh.system.manager.factory.AsyncFactory;
 import com.bqh.system.service.SysUserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
+
+import javax.annotation.Resource;
 
 /**
  * 登录校验方法
@@ -26,7 +27,7 @@ import org.springframework.util.StringUtils;
 @Component
 public class LoginService
 {
-    @Autowired
+    @Resource
     private PasswordService passwordService;
 
     @Reference(version = "1.0.0")

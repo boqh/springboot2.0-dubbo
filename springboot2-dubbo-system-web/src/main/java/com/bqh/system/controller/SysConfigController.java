@@ -29,7 +29,7 @@ public class SysConfigController extends BaseController
     private String prefix = "system/config";
 
     @Reference(version = "1.0.0")
-    private SysConfigService configService;
+    private SysConfigService sysConfigService;
 
     @RequiresPermissions("system:config:view")
     @GetMapping()
@@ -47,7 +47,7 @@ public class SysConfigController extends BaseController
     public TableDataInfo list(SysConfig config)
     {
         startPage();
-        List<SysConfig> list = configService.selectConfigList(config);
+        List<SysConfig> list = sysConfigService.selectConfigList(config);
         return getDataTable(list);
     }
 
@@ -57,7 +57,7 @@ public class SysConfigController extends BaseController
     @ResponseBody
     public AjaxResult export(SysConfig config)
     {
-        List<SysConfig> list = configService.selectConfigList(config);
+        List<SysConfig> list = sysConfigService.selectConfigList(config);
         ExcelUtil<SysConfig> util = new ExcelUtil<SysConfig>(SysConfig.class);
         return util.exportExcel(list, "config");
     }
@@ -81,7 +81,7 @@ public class SysConfigController extends BaseController
     public AjaxResult addSave(SysConfig config)
     {
         config.setCreateBy(ShiroUtils.getLoginName());
-        return toAjax(configService.insertConfig(config));
+        return toAjax(sysConfigService.insertConfig(config));
     }
 
     /**
@@ -90,7 +90,7 @@ public class SysConfigController extends BaseController
     @GetMapping("/edit/{configId}")
     public String edit(@PathVariable("configId") Long configId, ModelMap mmap)
     {
-        mmap.put("config", configService.selectConfigById(configId));
+        mmap.put("config", sysConfigService.selectConfigById(configId));
         return prefix + "/edit";
     }
 
@@ -104,7 +104,7 @@ public class SysConfigController extends BaseController
     public AjaxResult editSave(SysConfig config)
     {
         config.setUpdateBy(ShiroUtils.getLoginName());
-        return toAjax(configService.updateConfig(config));
+        return toAjax(sysConfigService.updateConfig(config));
     }
 
     /**
@@ -116,7 +116,7 @@ public class SysConfigController extends BaseController
     @ResponseBody
     public AjaxResult remove(String ids)
     {
-        return toAjax(configService.deleteConfigByIds(ids));
+        return toAjax(sysConfigService.deleteConfigByIds(ids));
     }
 
     /**
@@ -126,6 +126,6 @@ public class SysConfigController extends BaseController
     @ResponseBody
     public String checkConfigKeyUnique(SysConfig config)
     {
-        return configService.checkConfigKeyUnique(config);
+        return sysConfigService.checkConfigKeyUnique(config);
     }
 }

@@ -15,8 +15,8 @@ import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 
+import javax.annotation.Resource;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -35,7 +35,7 @@ public class UserRealm extends AuthorizingRealm
     @Reference(version = "1.0.0")
     private SysRoleService roleService;
 
-    @Autowired
+    @Resource
     private LoginService loginService;
 
 

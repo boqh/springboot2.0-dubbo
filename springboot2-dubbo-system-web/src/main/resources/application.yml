@@ -71,18 +71,19 @@ spring:
     restart:
       # 热部署开关
       enabled: false
-  dubbo:
-      application:
-        name: springboot2-dubbo-system-web
-      registry:
-        address: zookeeper://42.51.40.160:2181
-      consumer:
-        timeout: 1000
-        check: false
-      protocol:
-        name: dubbo-consumer
-        prot: 20881
-      scan: com.bqh.system
+#  dubbo:
+#      application:
+#        name: springboot2-dubbo-system-web
+#      registry:
+#        address: zookeeper://42.51.40.160:2181
+##        address: zookeeper://42.51.40.160:2181
+#      consumer:
+#        timeout: 1000
+#        check: false
+#      protocol:
+#        name: dubbo-consumer
+#        prot: 20881
+#      scan: com.bqh.system
 
 # Shiro
 shiro:
